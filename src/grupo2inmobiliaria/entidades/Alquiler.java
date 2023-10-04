@@ -33,7 +33,7 @@ public class Alquiler {
         this.fechaInicio = fechaInicio;
         this.fechaFin = fechaFin;
         this.monto = monto;
-        this.estado = estado;
+        this.estado = 'a'; //activo por defecto al crearse un contrato de alquiler
     }
 
     public Alquiler(int id_alquiler, Inquilino inquilino, Inmueble inmueble, Garante garante, LocalDate fechaInicio, LocalDate fechaFin, float monto, char estado) {
@@ -44,7 +44,7 @@ public class Alquiler {
         this.fechaInicio = fechaInicio;
         this.fechaFin = fechaFin;
         this.monto = monto;
-        this.estado = estado;
+        this.estado = 'a'; //activo por defecto al crearse un contrato de alquiler
     }
     
     //getters y setters 
