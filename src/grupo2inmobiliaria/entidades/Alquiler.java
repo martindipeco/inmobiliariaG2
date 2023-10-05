@@ -13,79 +13,52 @@ import java.time.LocalDate;
  */
 public class Alquiler {
     
-    private int id_alquiler;
-    private Inquilino inquilino;
-    private Inmueble inmueble;
-    private Garante garante;
-    private LocalDate fechaInicio;
+    private int idContrato;
+    private LocalDate fechaIni;
     private LocalDate fechaFin;
-    private float monto;
-    private char estado;
+    private int precioAlquiler;
+    private String estado;
+    private Inmueble inmueble;
+    private Inquilino inquilino;
     
     //constructores
     public Alquiler() {
     }
 
-    public Alquiler(Inquilino inquilino, Inmueble inmueble, Garante garante, LocalDate fechaInicio, LocalDate fechaFin, float monto, char estado) {
-        this.inquilino = inquilino;
-        this.inmueble = inmueble;
-        this.garante = garante;
-        this.fechaInicio = fechaInicio;
+    public Alquiler(LocalDate fechaIni, LocalDate fechaFin, int precioAlquiler, String estado, Inmueble inmueble, Inquilino inquilino) {
+        this.fechaIni = fechaIni;
         this.fechaFin = fechaFin;
-        this.monto = monto;
-        this.estado = 'a'; //activo por defecto al crearse un contrato de alquiler
+        this.precioAlquiler = precioAlquiler;
+        this.estado = estado;
+        this.inmueble = inmueble;
+        this.inquilino = inquilino;
     }
 
-    public Alquiler(int id_alquiler, Inquilino inquilino, Inmueble inmueble, Garante garante, LocalDate fechaInicio, LocalDate fechaFin, float monto, char estado) {
-        this.id_alquiler = id_alquiler;
-        this.inquilino = inquilino;
-        this.inmueble = inmueble;
-        this.garante = garante;
-        this.fechaInicio = fechaInicio;
+    public Alquiler(int idContrato, LocalDate fechaIni, LocalDate fechaFin, int precioAlquiler, String estado, Inmueble inmueble, Inquilino inquilino) {
+        this.idContrato = idContrato;
+        this.fechaIni = fechaIni;
         this.fechaFin = fechaFin;
-        this.monto = monto;
-        this.estado = 'a'; //activo por defecto al crearse un contrato de alquiler
+        this.precioAlquiler = precioAlquiler;
+        this.estado = estado;
+        this.inmueble = inmueble;
+        this.inquilino = inquilino;
     }
     
-    //getters y setters 
-    public int getId_alquiler() {
-        return id_alquiler;
+    //getters y setters
+    public int getIdContrato() {
+        return idContrato;
     }
 
-    public void setId_alquiler(int id_alquiler) {
-        this.id_alquiler = id_alquiler;
+    public void setIdContrato(int idContrato) {
+        this.idContrato = idContrato;
     }
 
-    public Inquilino getInquilino() {
-        return inquilino;
+    public LocalDate getFechaIni() {
+        return fechaIni;
     }
 
-    public void setInquilino(Inquilino inquilino) {
-        this.inquilino = inquilino;
-    }
-
-    public Inmueble getInmueble() {
-        return inmueble;
-    }
-
-    public void setInmueble(Inmueble inmueble) {
-        this.inmueble = inmueble;
-    }
-
-    public Garante getGarante() {
-        return garante;
-    }
-
-    public void setGarante(Garante garante) {
-        this.garante = garante;
-    }
-
-    public LocalDate getFechaInicio() {
-        return fechaInicio;
-    }
-
-    public void setFechaInicio(LocalDate fechaInicio) {
-        this.fechaInicio = fechaInicio;
+    public void setFechaIni(LocalDate fechaIni) {
+        this.fechaIni = fechaIni;
     }
 
     public LocalDate getFechaFin() {
@@ -96,26 +69,42 @@ public class Alquiler {
         this.fechaFin = fechaFin;
     }
 
-    public float getMonto() {
-        return monto;
+    public int getPrecioAlquiler() {
+        return precioAlquiler;
     }
 
-    public void setMonto(float monto) {
-        this.monto = monto;
+    public void setPrecioAlquiler(int precioAlquiler) {
+        this.precioAlquiler = precioAlquiler;
     }
 
-    public char getEstado() {
+    public String getEstado() {
         return estado;
     }
 
-    public void setEstado(char estado) {
+    public void setEstado(String estado) {
         this.estado = estado;
+    }
+
+    public Inmueble getInmueble() {
+        return inmueble;
+    }
+
+    public void setInmueble(Inmueble inmueble) {
+        this.inmueble = inmueble;
+    }
+
+    public Inquilino getInquilino() {
+        return inquilino;
+    }
+
+    public void setInquilino(Inquilino inquilino) {
+        this.inquilino = inquilino;
     }
     
     //toString
     @Override
     public String toString() {
-        return "Alquiler{" + "id_alquiler=" + id_alquiler + ", inquilino=" + inquilino + ", inmueble=" + inmueble + ", garante=" + garante + ", fechaInicio=" + fechaInicio + ", fechaFin=" + fechaFin + ", monto=" + monto + ", estado=" + estado + '}';
+        return "Alquiler{" + "idContrato=" + idContrato + ", fechaIni=" + fechaIni + ", fechaFin=" + fechaFin + ", precioAlquiler=" + precioAlquiler + ", estado=" + estado + ", inmueble=" + inmueble + ", inquilino=" + inquilino + '}';
     }
     
 }
