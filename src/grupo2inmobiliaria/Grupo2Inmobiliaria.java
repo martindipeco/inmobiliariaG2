@@ -27,16 +27,19 @@ public class Grupo2Inmobiliaria {
         // TODO code application logic here
         
         /**
+         * 
+        
         Propietario propi = new Propietario(1, "lopez", "daniel", 66, "uunacalle", 3333, "mail");
         Inquilino inqui = new Inquilino(1, "perez","juan", "calle", 123, "mail", 111, "empresa");
         Inmueble inmu = new Inmueble(1, "calle", 123, 'd', 11f, 99f, 'a', true, propi);
         
-        Alquiler alquilo = new Alquiler(LocalDate.of(2023, 10, 5), LocalDate.of(2023, 12, 5), 999, "a",inmu, inqui);
+        Alquiler alquilo = new Alquiler(LocalDate.of(2023, 12, 6), LocalDate.of(2023, 12, 7), 888, "a",inmu, inqui);
         
         AlquilerData alquiData = new AlquilerData();
         
         alquiData.generarContrato(alquilo);
-        */
+         * 
+         */
         
     }
     

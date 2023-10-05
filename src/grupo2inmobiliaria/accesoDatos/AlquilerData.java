@@ -61,6 +61,7 @@ public class AlquilerData {
                 // 1 es el numero de columna
                 alqui.setIdContrato(rs.getInt(1));
                 JOptionPane.showMessageDialog(null, "Contrato creado existosamente");
+                JOptionPane.showMessageDialog(null, "El Propietario " + alqui.getInmueble().getPropietario().getApellido() + " recibió un aviso al teléfono " + alqui.getInmueble().getPropietario().getTelefono());
             }
             //cierro el objeto para liberar recursos
             ps.close();
