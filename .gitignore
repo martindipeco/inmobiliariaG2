@@ -3,6 +3,8 @@
 /build/
 /dist/
 
+#Excluyo el main para no afectar con pruebas
+Grupo2Inmobiliaria.java
 
 # Compiled class file
 *.class 
